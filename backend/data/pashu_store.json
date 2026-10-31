@@ -1,0 +1,982 @@
+{
+  "vetsList": [
+    {
+      "id": "vet-101",
+      "name": "Dr. Rajesh Sharma",
+      "qualification": "B.V.Sc & A.H., M.V.Sc (Veterinary Epidemiology)",
+      "designation": "Senior District Veterinary Officer",
+      "phone": "+91 98765 43210",
+      "email": "dr.rajesh.sharma@gov.in",
+      "district": "Ludhiana",
+      "state": "Punjab",
+      "location": {
+        "lat": 30.901,
+        "lng": 75.8573
+      },
+      "address": "Civil Veterinary Hospital, Ferozepur Road, Ludhiana",
+      "status": "AVAILABLE",
+      "assignedRadiusKm": 25,
+      "rating": 4.9,
+      "completedVisits": 142,
+      "avgResponseMinutes": 18,
+      "avatar": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=150&auto=format&fit=crop&q=80"
+    },
+    {
+      "id": "vet-102",
+      "name": "Dr. Sunita Verma",
+      "qualification": "B.V.Sc, M.V.Sc (Virology)",
+      "designation": "Block Veterinary Extension Officer",
+      "phone": "+91 98123 87654",
+      "email": "dr.sunita.verma@gov.in",
+      "district": "Karnal",
+      "state": "Haryana",
+      "location": {
+        "lat": 29.6857,
+        "lng": 76.9905
+      },
+      "address": "Veterinary Polyclinic, Sector 12, Karnal",
+      "status": "ON_FIELD",
+      "assignedRadiusKm": 20,
+      "rating": 4.8,
+      "completedVisits": 98,
+      "avgResponseMinutes": 22,
+      "avatar": "https://images.unsplash.com/photo-1594824813566-88855ce78036?w=150&auto=format&fit=crop&q=80"
+    },
+    {
+      "id": "vet-103",
+      "name": "Dr. Anil Kumar Patel",
+      "qualification": "B.V.Sc & A.H.",
+      "designation": "Mobile Veterinary Unit Lead",
+      "phone": "+91 94567 12345",
+      "email": "dr.anil.patel@gov.in",
+      "district": "Anand",
+      "state": "Gujarat",
+      "location": {
+        "lat": 22.5645,
+        "lng": 72.9289
+      },
+      "address": "NDDB Campus Road, Anand",
+      "status": "AVAILABLE",
+      "assignedRadiusKm": 30,
+      "rating": 4.7,
+      "completedVisits": 210,
+      "avgResponseMinutes": 15,
+      "avatar": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=150&auto=format&fit=crop&q=80"
+    },
+    {
+      "id": "vet-104",
+      "name": "Dr. Meenakshi Sundaram",
+      "qualification": "B.V.Sc, Ph.D. (Livestock Health)",
+      "designation": "Regional Biosecurity Inspector",
+      "phone": "+91 97890 65432",
+      "email": "dr.meenakshi.sundaram@gov.in",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "location": {
+        "lat": 18.5204,
+        "lng": 73.8567
+      },
+      "address": "Animal Husbandry Dept Complex, Pune",
+      "status": "AVAILABLE",
+      "assignedRadiusKm": 35,
+      "rating": 4.9,
+      "completedVisits": 175,
+      "avgResponseMinutes": 20,
+      "avatar": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&auto=format&fit=crop&q=80"
+    }
+  ],
+  "requestsList": [
+    {
+      "id": "req-1793429532244",
+      "farmId": "farm-1793429532244",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "09267795806",
+      "farmLocation": {
+        "lat": 29.0018557,
+        "lng": 77.7679671
+      },
+      "village": "Dulhera, Meerut, Uttar Pradesh",
+      "animalTag": "IVR-EXO-5806-32244",
+      "species": "Swine",
+      "symptoms": [
+        "General Symptoms Reported"
+      ],
+      "aiRiskLevel": "HIGH",
+      "suspectedDisease": "Swine Erysipelas (Diamond Skin)",
+      "requestedVetId": "vet-102",
+      "requestedVetName": "Dr. Sunita Verma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-31T06:52:12.244Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel"
+    },
+    {
+      "id": "req-1793427609817",
+      "farmId": "farm-1793427609817",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "09639000115",
+      "farmLocation": {
+        "lat": 29.0018557,
+        "lng": 77.7679671
+      },
+      "village": "Dulhera, Meerut, Uttar Pradesh",
+      "animalTag": "IVR-EXO-0115-09817",
+      "species": "Buffalo",
+      "symptoms": [
+        "Mouth / Foot Blisters or Lameness"
+      ],
+      "aiRiskLevel": "CRITICAL",
+      "suspectedDisease": "Foot and Mouth Disease (FMD)",
+      "requestedVetId": "vet-102",
+      "requestedVetName": "Dr. Sunita Verma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-31T06:20:09.817Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel"
+    },
+    {
+      "id": "req-1793427408856",
+      "farmId": "farm-1793427408856",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "09639000115",
+      "farmLocation": {
+        "lat": 29.0018557,
+        "lng": 77.7679671
+      },
+      "village": "Abdullapur, Meerut, Uttar Pradesh",
+      "animalTag": "IVR-EXO-0115-08856",
+      "species": "Swine",
+      "symptoms": [
+        "General Symptoms Reported"
+      ],
+      "aiRiskLevel": "HIGH",
+      "suspectedDisease": "Swine Erysipelas (Diamond Skin)",
+      "requestedVetId": "vet-102",
+      "requestedVetName": "Dr. Sunita Verma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-31T06:16:48.856Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel"
+    },
+    {
+      "id": "req-1793392958413",
+      "farmId": "farm-1793392958413",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "09557484907",
+      "farmLocation": {
+        "lat": 30.3255646,
+        "lng": 78.0436813
+      },
+      "village": "PIN 248002, Dehradun",
+      "animalTag": "IVR-EXO-4907-58413",
+      "species": "Swine",
+      "symptoms": [
+        "General Symptoms Reported"
+      ],
+      "aiRiskLevel": "HIGH",
+      "suspectedDisease": "Swine Erysipelas (Diamond Skin)",
+      "requestedVetId": "vet-102",
+      "requestedVetName": "Dr. Sunita Verma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-30T20:42:38.413Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel"
+    },
+    {
+      "id": "req-1793381540814",
+      "farmId": "farm-1793381540814",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "+919876500002",
+      "farmLocation": {
+        "lat": 30.9090157,
+        "lng": 75.851601
+      },
+      "village": "PIN 141002, Ludhiana",
+      "animalTag": "IVR-EXO-0002-40814",
+      "species": "Swine",
+      "symptoms": [
+        "High Fever",
+        "Sudden Deaths"
+      ],
+      "aiRiskLevel": "CRITICAL",
+      "suspectedDisease": "African Swine Fever (ASF)",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-30T17:32:20.814Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel"
+    },
+    {
+      "id": "req-1793381540388",
+      "farmId": "farm-1793381540388",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "+919876500001",
+      "farmLocation": {
+        "lat": 30.9090157,
+        "lng": 75.851601
+      },
+      "village": "PIN 141001, Ludhiana",
+      "animalTag": "IVR-EXO-0001-40388",
+      "species": "Cattle",
+      "symptoms": [
+        "High Fever",
+        "Skin Nodules / Lumps"
+      ],
+      "aiRiskLevel": "HIGH",
+      "suspectedDisease": "Lumpy Skin Disease (LSD)",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-30T17:32:20.388Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel"
+    },
+    {
+      "id": "req-1793380988343",
+      "farmId": "farm-1793380988343",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "+919876543210",
+      "farmLocation": {
+        "lat": 30.892,
+        "lng": 75.845
+      },
+      "village": "PIN 141001, Ludhiana",
+      "animalTag": "IVR-EXO-3210-88343",
+      "species": "Cattle",
+      "symptoms": [
+        "High Fever"
+      ],
+      "aiRiskLevel": "MODERATE",
+      "suspectedDisease": "Bovine Respiratory Disease (BRD)",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "PENDING",
+      "urgency": "HIGH",
+      "createdAt": "2026-10-30T17:23:08.343Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel",
+      "approximateLocation": true
+    },
+    {
+      "id": "req-1793311994904",
+      "farmId": "farm-1793311994904",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "+919876500002",
+      "farmLocation": {
+        "lat": 30.9090157,
+        "lng": 75.851601
+      },
+      "village": "PIN 141002, Ludhiana",
+      "animalTag": "IVR-EXO-0002-94904",
+      "species": "Swine",
+      "symptoms": [
+        "High Fever",
+        "Sudden Deaths"
+      ],
+      "aiRiskLevel": "CRITICAL",
+      "suspectedDisease": "African Swine Fever (ASF)",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-29T22:13:14.904Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel"
+    },
+    {
+      "id": "req-1793311994496",
+      "farmId": "farm-1793311994496",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "+919876500001",
+      "farmLocation": {
+        "lat": 30.9090157,
+        "lng": 75.851601
+      },
+      "village": "PIN 141001, Ludhiana",
+      "animalTag": "IVR-EXO-0001-94496",
+      "species": "Cattle",
+      "symptoms": [
+        "High Fever",
+        "Skin Nodules / Lumps"
+      ],
+      "aiRiskLevel": "HIGH",
+      "suspectedDisease": "Lumpy Skin Disease (LSD)",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-29T22:13:14.496Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel"
+    },
+    {
+      "id": "req-1793304711452",
+      "farmId": "farm-1793304711452",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "+919876500002",
+      "farmLocation": {
+        "lat": 30.9090157,
+        "lng": 75.851601
+      },
+      "village": "PIN 141002, Ludhiana",
+      "animalTag": "IVR-EXO-0002-11452",
+      "species": "Swine",
+      "symptoms": [
+        "High Fever",
+        "Sudden Deaths"
+      ],
+      "aiRiskLevel": "CRITICAL",
+      "suspectedDisease": "African Swine Fever (ASF)",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-29T20:11:51.452Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel"
+    },
+    {
+      "id": "req-1793304711061",
+      "farmId": "farm-1793304711061",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "+919876500001",
+      "farmLocation": {
+        "lat": 30.9090157,
+        "lng": 75.851601
+      },
+      "village": "PIN 141001, Ludhiana",
+      "animalTag": "IVR-EXO-0001-11061",
+      "species": "Cattle",
+      "symptoms": [
+        "High Fever",
+        "Skin Nodules / Lumps"
+      ],
+      "aiRiskLevel": "HIGH",
+      "suspectedDisease": "Lumpy Skin Disease (LSD)",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "ACCEPTED",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-29T20:11:51.061Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel",
+      "etaMinutes": 20
+    },
+    {
+      "id": "req-1793304679630",
+      "farmId": "farm-1793304679630",
+      "farmerName": "IVR Farmer (Exotel)",
+      "farmerPhone": "+919876500001",
+      "farmLocation": {
+        "lat": 30.9090157,
+        "lng": 75.851601
+      },
+      "village": "PIN 141001, Ludhiana",
+      "animalTag": "IVR-EXO-0001-79630",
+      "species": "Cattle",
+      "symptoms": [
+        "High Fever",
+        "Skin Nodules / Lumps"
+      ],
+      "aiRiskLevel": "HIGH",
+      "suspectedDisease": "Lumpy Skin Disease (LSD)",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-29T20:11:19.630Z",
+      "notes": "Registered via Exotel IVR phone call",
+      "source": "IVR-Exotel"
+    },
+    {
+      "id": "req-500",
+      "farmId": "farm-1",
+      "farmerName": "Gurpreet Singh",
+      "farmerPhone": "+91 98144 55667",
+      "farmLocation": {
+        "lat": 30.895,
+        "lng": 75.849
+      },
+      "animalTag": "IN-PB-2024-8811",
+      "species": "Cattle",
+      "symptoms": [
+        "Mild fever",
+        "Udder swelling"
+      ],
+      "aiRiskLevel": "MEDIUM",
+      "suspectedDisease": "Bovine Mastitis",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "COMPLETED",
+      "urgency": "MEDIUM",
+      "createdAt": "2026-10-28T20:10:42.575Z",
+      "notes": "Clinical inspection completed. Intramammary antibiotic administered."
+    },
+    {
+      "id": "req-499",
+      "farmId": "farm-1",
+      "farmerName": "Jaswinder Kaur",
+      "farmerPhone": "+91 98722 11223",
+      "farmLocation": {
+        "lat": 30.888,
+        "lng": 75.839
+      },
+      "animalTag": "IN-PB-2024-7720",
+      "species": "Cattle",
+      "symptoms": [
+        "Skin lumps",
+        "Fever"
+      ],
+      "aiRiskLevel": "HIGH",
+      "suspectedDisease": "Lumpy Skin Disease (LSD)",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "COMPLETED",
+      "urgency": "HIGH",
+      "createdAt": "2026-10-27T20:10:42.576Z",
+      "notes": "Ring vaccination completed. Quarantined."
+    },
+    {
+      "id": "req-501",
+      "farmId": "farm-1",
+      "farmerName": "Harpreet Singh",
+      "farmerPhone": "+91 98711 22334",
+      "farmLocation": {
+        "lat": 30.892,
+        "lng": 75.845
+      },
+      "animalTag": "IN-PB-2024-8842",
+      "species": "Cattle",
+      "symptoms": [
+        "Skin nodules/lumps",
+        "High fever (40°C+)",
+        "Loss of appetite",
+        "Reduced milk production"
+      ],
+      "aiRiskLevel": "HIGH",
+      "suspectedDisease": "Lumpy Skin Disease (LSD)",
+      "requestedVetId": "vet-101",
+      "requestedVetName": "Dr. Rajesh Sharma",
+      "status": "PENDING",
+      "urgency": "CRITICAL",
+      "createdAt": "2026-10-29T19:35:42.576Z",
+      "notes": "Cow has suddenly developed firm raised lumps all over skin. Isolated in back shed."
+    },
+    {
+      "id": "req-502",
+      "farmId": "farm-2",
+      "farmerName": "Rameshwar Yadav",
+      "farmerPhone": "+91 98222 33445",
+      "farmLocation": {
+        "lat": 29.69,
+        "lng": 77.001
+      },
+      "animalTag": "IN-HR-2025-1109",
+      "species": "Buffalo",
+      "symptoms": [
+        "Excessive drooling/salivation",
+        "Limping / Foot lesions"
+      ],
+      "aiRiskLevel": "MEDIUM",
+      "suspectedDisease": "Foot & Mouth Disease (FMD)",
+      "requestedVetId": "vet-102",
+      "requestedVetName": "Dr. Sunita Verma",
+      "status": "ACCEPTED",
+      "urgency": "HIGH",
+      "createdAt": "2026-10-29T18:40:42.576Z",
+      "notes": "Vets estimated arrival in 15 mins."
+    }
+  ],
+  "animalsList": [
+    {
+      "id": "anim-1793429532244",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-5806-32244",
+      "species": "Swine",
+      "breed": "Large White Yorkshire",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "b30761951aad358b760c5282ae700c3e3b9397bf4924f764c05b0c254aae96b1",
+      "status": "INFECTED",
+      "suspectedDisease": "Swine Erysipelas (Diamond Skin)",
+      "assignedVetName": "Dr. Sunita Verma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-31",
+          "diagnosis": "🔴 INFECTED — Suspected Swine Erysipelas (Diamond Skin)",
+          "vetId": "vet-102",
+          "vetName": "Dr. Sunita Verma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Sunita Verma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793427609817",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-0115-09817",
+      "species": "Buffalo",
+      "breed": "Holstein Cross",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "a5e1583a1cc304039070081b1e504b18bd7b113728832679d24aa6649214fb0d",
+      "status": "INFECTED",
+      "suspectedDisease": "Foot and Mouth Disease (FMD)",
+      "assignedVetName": "Dr. Sunita Verma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-31",
+          "diagnosis": "🔴 INFECTED — Suspected Foot and Mouth Disease (FMD)",
+          "vetId": "vet-102",
+          "vetName": "Dr. Sunita Verma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Sunita Verma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793427408856",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-0115-08856",
+      "species": "Swine",
+      "breed": "Large White Yorkshire",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "a71afb1dec3fe7785d92fc06e4d5a7fd68fdf778f56609626f5fe019999cdbf3",
+      "status": "INFECTED",
+      "suspectedDisease": "Swine Erysipelas (Diamond Skin)",
+      "assignedVetName": "Dr. Sunita Verma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-31",
+          "diagnosis": "🔴 INFECTED — Suspected Swine Erysipelas (Diamond Skin)",
+          "vetId": "vet-102",
+          "vetName": "Dr. Sunita Verma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Sunita Verma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793392958413",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-4907-58413",
+      "species": "Swine",
+      "breed": "Large White Yorkshire",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "b79049a1b3c15c71f786cf5c49f273bd66aa6a104e7c6405e87e0e1c6e62255c",
+      "status": "INFECTED",
+      "suspectedDisease": "Swine Erysipelas (Diamond Skin)",
+      "assignedVetName": "Dr. Sunita Verma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-30",
+          "diagnosis": "🔴 INFECTED — Suspected Swine Erysipelas (Diamond Skin)",
+          "vetId": "vet-102",
+          "vetName": "Dr. Sunita Verma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Sunita Verma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793381540814",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-0002-40814",
+      "species": "Swine",
+      "breed": "Large White Yorkshire",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "f77a52380e8a4550ea6b7c03a0a168c95bd0964c7f75950d7dc908a644b2ad39",
+      "status": "INFECTED",
+      "suspectedDisease": "African Swine Fever (ASF)",
+      "assignedVetName": "Dr. Rajesh Sharma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-30",
+          "diagnosis": "🔴 INFECTED — Suspected African Swine Fever (ASF)",
+          "vetId": "vet-101",
+          "vetName": "Dr. Rajesh Sharma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Rajesh Sharma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793381540388",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-0001-40388",
+      "species": "Cattle",
+      "breed": "Holstein Cross",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "f91d6d6d215fd515d4a5fd2aebdcf307408915f37c42babe596f0adaba12a454",
+      "status": "INFECTED",
+      "suspectedDisease": "Lumpy Skin Disease (LSD)",
+      "assignedVetName": "Dr. Rajesh Sharma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-30",
+          "diagnosis": "🔴 INFECTED — Suspected Lumpy Skin Disease (LSD)",
+          "vetId": "vet-101",
+          "vetName": "Dr. Rajesh Sharma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Rajesh Sharma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793380988343",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-3210-88343",
+      "species": "Cattle",
+      "breed": "Holstein Cross",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "2577162bf3501933b0686187d76c0832caf19eb14f995a9b6d32fbf54a829237",
+      "status": "INFECTED",
+      "suspectedDisease": "Bovine Respiratory Disease (BRD)",
+      "assignedVetName": "Dr. Rajesh Sharma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-30",
+          "diagnosis": "🔴 INFECTED — Suspected Bovine Respiratory Disease (BRD)",
+          "vetId": "vet-101",
+          "vetName": "Dr. Rajesh Sharma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Rajesh Sharma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793311994904",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-0002-94904",
+      "species": "Swine",
+      "breed": "Large White Yorkshire",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "95f81c78cca46c124829fdf73d847cb2aaef767d0963f639f7b7531414e5ff2a",
+      "status": "INFECTED",
+      "suspectedDisease": "African Swine Fever (ASF)",
+      "assignedVetName": "Dr. Rajesh Sharma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-29",
+          "diagnosis": "🔴 INFECTED — Suspected African Swine Fever (ASF)",
+          "vetId": "vet-101",
+          "vetName": "Dr. Rajesh Sharma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Rajesh Sharma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793311994496",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-0001-94496",
+      "species": "Cattle",
+      "breed": "Holstein Cross",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "04ce98c70b2ec1f42325b3900b6805f1c34107ab4f55653801232d69ec9fe693",
+      "status": "INFECTED",
+      "suspectedDisease": "Lumpy Skin Disease (LSD)",
+      "assignedVetName": "Dr. Rajesh Sharma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-29",
+          "diagnosis": "🔴 INFECTED — Suspected Lumpy Skin Disease (LSD)",
+          "vetId": "vet-101",
+          "vetName": "Dr. Rajesh Sharma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Rajesh Sharma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793304711452",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-0002-11452",
+      "species": "Swine",
+      "breed": "Large White Yorkshire",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "c37b22e4e2d4129c8b1909600c9fd34c0febce7ad2f2065a5332268e27d27168",
+      "status": "INFECTED",
+      "suspectedDisease": "African Swine Fever (ASF)",
+      "assignedVetName": "Dr. Rajesh Sharma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-29",
+          "diagnosis": "🔴 INFECTED — Suspected African Swine Fever (ASF)",
+          "vetId": "vet-101",
+          "vetName": "Dr. Rajesh Sharma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Rajesh Sharma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793304711061",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-0001-11061",
+      "species": "Cattle",
+      "breed": "Holstein Cross",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "5ae9f450a0b3f18b9f7b53b89d04cf367418d2233df19443d73a9340f951b4fd",
+      "status": "INFECTED",
+      "suspectedDisease": "Lumpy Skin Disease (LSD)",
+      "assignedVetName": "Dr. Rajesh Sharma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-29",
+          "diagnosis": "🔴 INFECTED — Suspected Lumpy Skin Disease (LSD)",
+          "vetId": "vet-101",
+          "vetName": "Dr. Rajesh Sharma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Rajesh Sharma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-1793304679630",
+      "farmId": "farm-1",
+      "tagNumber": "IVR-EXO-0001-79630",
+      "species": "Cattle",
+      "breed": "Holstein Cross",
+      "ageMonths": 36,
+      "gender": "FEMALE",
+      "healthPassportHash": "3f22dabf46a9927c069f02b33e00445275ad8d988378fcb7cc15009329fc8eac",
+      "status": "INFECTED",
+      "suspectedDisease": "Lumpy Skin Disease (LSD)",
+      "assignedVetName": "Dr. Rajesh Sharma",
+      "vaccinations": [],
+      "medicalHistory": [
+        {
+          "date": "2026-10-29",
+          "diagnosis": "🔴 INFECTED — Suspected Lumpy Skin Disease (LSD)",
+          "vetId": "vet-101",
+          "vetName": "Dr. Rajesh Sharma",
+          "prescriptions": [
+            "Isolate animal in quarantine shed",
+            "Administer Antipyretic & Antihistamine",
+            "Apply Antiseptic Spray"
+          ],
+          "remarks": "Emergency Dispatch Request initiated by Farmer via Exotel IVR. Status: INFECTED — AWAITING VET VISIT (Dr. Rajesh Sharma)"
+        }
+      ]
+    },
+    {
+      "id": "anim-101",
+      "farmId": "farm-1",
+      "tagNumber": "IN-PB-2024-8841",
+      "species": "Cattle",
+      "breed": "Holstein Friesian Cross",
+      "ageMonths": 36,
+      "gender": "Female",
+      "healthStatus": "HEALTHY",
+      "vaccinations": [
+        {
+          "vaccineName": "FMD Dual Antigen",
+          "batchNumber": "FMD-2026-0491",
+          "administeredDate": "2026-03-15",
+          "nextDueDate": "2026-09-15",
+          "administeredBy": "Dr. Rajesh Sharma",
+          "recordHash": "a7d9f21b8c6e4a3b1d9e7f5c3a1b9d8e7f5c3a1b9d8e7f5c3a1b9d8e7f5c3a1b"
+        },
+        {
+          "vaccineName": "Lumpy Skin Disease (Lumpy-Provac)",
+          "batchNumber": "LSD-2025-9921",
+          "administeredDate": "2025-11-10",
+          "nextDueDate": "2026-11-10",
+          "administeredBy": "Dr. Rajesh Sharma",
+          "recordHash": "f3c2b1a9d8e7f6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1"
+        }
+      ],
+      "medicalHistory": [
+        {
+          "date": "2026-05-20",
+          "condition": "Mild Mastitis",
+          "treatment": "Ceftiofur Sodium intramammary infusion + Anti-inflammatory",
+          "vetName": "Dr. Rajesh Sharma",
+          "status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "id": "anim-102",
+      "farmId": "farm-1",
+      "tagNumber": "IN-PB-2024-8842",
+      "species": "Cattle",
+      "breed": "Sahiwal Purebred",
+      "ageMonths": 48,
+      "gender": "Female",
+      "healthStatus": "SUSPECTED",
+      "vaccinations": [
+        {
+          "vaccineName": "FMD Dual Antigen",
+          "batchNumber": "FMD-2026-0491",
+          "administeredDate": "2026-03-15",
+          "nextDueDate": "2026-09-15",
+          "administeredBy": "Dr. Rajesh Sharma",
+          "recordHash": "e5f4d3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b3a2f1e0d9c8b7a6f5e4"
+        }
+      ],
+      "medicalHistory": [
+        {
+          "date": "2026-08-18",
+          "condition": "Nodular Skin Lesions & High Fever (40.5°C)",
+          "treatment": "Isolated from herd. Awaiting diagnostic sample confirmation.",
+          "vetName": "Dr. Rajesh Sharma",
+          "status": "UNDER_OBSERVATION"
+        }
+      ]
+    },
+    {
+      "id": "anim-103",
+      "farmId": "farm-2",
+      "tagNumber": "IN-HR-2025-1109",
+      "species": "Buffalo",
+      "breed": "Murrah",
+      "ageMonths": 52,
+      "gender": "Female",
+      "healthStatus": "HEALTHY",
+      "vaccinations": [
+        {
+          "vaccineName": "Haemorrhagic Septicaemia (HS)",
+          "batchNumber": "HS-2026-0012",
+          "administeredDate": "2026-06-01",
+          "nextDueDate": "2027-06-01",
+          "administeredBy": "Dr. Sunita Verma",
+          "recordHash": "b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7"
+        }
+      ],
+      "medicalHistory": []
+    },
+    {
+      "id": "anim-104",
+      "farmId": "farm-3",
+      "tagNumber": "IN-GJ-BATCH-402",
+      "species": "Poultry",
+      "breed": "BV-300 Layer",
+      "ageMonths": 8,
+      "gender": "Female",
+      "healthStatus": "HEALTHY",
+      "vaccinations": [
+        {
+          "vaccineName": "Ranikhet Disease (LaSota)",
+          "batchNumber": "RD-2026-880",
+          "administeredDate": "2026-02-10",
+          "nextDueDate": "2026-08-10",
+          "administeredBy": "Dr. Anil Kumar Patel",
+          "recordHash": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2"
+        }
+      ],
+      "medicalHistory": []
+    }
+  ],
+  "outbreaksList": [
+    {
+      "id": "outbreak-1",
+      "diseaseName": "Lumpy Skin Disease (LSD)",
+      "affectedSpecies": "Cattle / Buffalo",
+      "severity": "HIGH",
+      "district": "Ludhiana",
+      "state": "Punjab",
+      "centerLocation": {
+        "lat": 30.9,
+        "lng": 75.85
+      },
+      "radiusKm": 15,
+      "confirmedCases": 42,
+      "suspectedCases": 18,
+      "quarantineStatus": "CONTAINMENT_ZONE_ACTIVE",
+      "reportedDate": "2026-08-12",
+      "lastUpdated": "2026-08-19"
+    },
+    {
+      "id": "outbreak-2",
+      "diseaseName": "Foot & Mouth Disease (FMD)",
+      "affectedSpecies": "Cattle / Sheep / Swine",
+      "severity": "MEDIUM",
+      "district": "Karnal",
+      "state": "Haryana",
+      "centerLocation": {
+        "lat": 29.68,
+        "lng": 76.99
+      },
+      "radiusKm": 10,
+      "confirmedCases": 14,
+      "suspectedCases": 9,
+      "quarantineStatus": "RING_VACCINATION_IN_PROGRESS",
+      "reportedDate": "2026-08-14",
+      "lastUpdated": "2026-08-18"
+    }
+  ],
+  "complaintsList": []
+}

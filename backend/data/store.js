@@ -1,0 +1,178 @@
+const fs = require('fs');
+const path = require('path');
+const { seedVets, seedVetRequests, seedAnimals, seedOutbreaks, generateHash } = require('./seedData');
+
+// Determine persistent data file path (/tmp/pashu_store.json on Vercel, local fallback in dev)
+const STORE_PATH = process.env.VERCEL 
+  ? path.join('/tmp', 'pashu_store.json')
+  : path.join(__dirname, 'pashu_store.json');
+
+// Memory cache initialized with seed data
+let cache = {
+  vetsList: [...seedVets],
+  requestsList: [...seedVetRequests],
+  animalsList: [...seedAnimals],
+  outbreaksList: [...seedOutbreaks],
+  complaintsList: []
+};
+
+// Helper to load persistent store from disk if present
+function loadStore() {
+  try {
+    if (fs.existsSync(STORE_PATH)) {
+      const data = fs.readFileSync(STORE_PATH, 'utf8');
+      const parsed = JSON.parse(data);
+      if (parsed.requestsList && Array.isArray(parsed.requestsList)) {
+        cache.requestsList = parsed.requestsList;
+      }
+      if (parsed.animalsList && Array.isArray(parsed.animalsList)) {
+        cache.animalsList = parsed.animalsList;
+      }
+      if (parsed.outbreaksList && Array.isArray(parsed.outbreaksList)) {
+        cache.outbreaksList = parsed.outbreaksList;
+      }
+      if (parsed.complaintsList && Array.isArray(parsed.complaintsList)) {
+        cache.complaintsList = parsed.complaintsList;
+      }
+      if (parsed.vetsList && Array.isArray(parsed.vetsList)) {
+        cache.vetsList = parsed.vetsList;
+      }
+    }
+  } catch (err) {
+    console.warn("Could not load persistent store file:", err);
+  }
+}
+
+// Helper to save current cache to disk
+function saveStore() {
+  try {
+    fs.writeFileSync(STORE_PATH, JSON.stringify(cache, null, 2), 'utf8');
+  } catch (err) {
+    console.warn("Could not save persistent store file:", err);
+  }
+}
+
+// Initial load
+loadStore();
+
+module.exports = {
+  getVets: () => { loadStore(); return cache.vetsList; },
+  getRequests: () => { loadStore(); return cache.requestsList; },
+  getAnimals: () => { loadStore(); return cache.animalsList; },
+  getOutbreaks: () => { loadStore(); return cache.outbreaksList; },
+  getComplaints: () => { loadStore(); return cache.complaintsList; },
+
+  addRequest: (reqObj) => {
+    loadStore();
+    cache.requestsList.unshift(reqObj);
+    saveStore();
+  },
+
+  updateRequestStatus: (id, status, etaMinutes) => {
+    loadStore();
+    let req = cache.requestsList.find(r => 
+      r.id === id || 
+      r.animalTag === id || 
+      (r.id && r.id.toLowerCase() === id.toLowerCase()) ||
+      (r.animalTag && r.animalTag.toLowerCase() === id.toLowerCase())
+    );
+    if (!req) {
+      // Upsert request dynamically if missing from cache
+      req = {
+        id: id || "req-" + Date.now(),
+        farmerName: "Local Farmer",
+        farmerPhone: "+91 98711 22334",
+        village: "Ludhiana Sector",
+        animalTag: id || "IN-PB-2024-8842",
+        species: "Cattle",
+        symptoms: ["High Fever", "Skin Lesions"],
+        aiRiskLevel: "HIGH",
+        suspectedDisease: "Lumpy Skin Disease (LSD)",
+        requestedVetName: "Dr. Rajesh Sharma",
+        status: status || "ACCEPTED",
+        etaMinutes: etaMinutes || 20,
+        createdAt: new Date().toISOString()
+      };
+      cache.requestsList.unshift(req);
+    } else {
+      req.status = status;
+      if (etaMinutes) req.etaMinutes = etaMinutes;
+    }
+    saveStore();
+    return req;
+  },
+
+  completeRequest: (requestId, animalTag, inspectionLog) => {
+    loadStore();
+    const req = cache.requestsList.find(r => r.id === requestId || r.animalTag === animalTag);
+    if (req) {
+      req.status = "COMPLETED";
+      req.completedAt = new Date().toISOString();
+      req.inspectionLog = inspectionLog;
+    }
+
+    // Find matching animal or create entry if missing
+    let anim = cache.animalsList.find(a => a.tagNumber === animalTag || a.id === animalTag);
+    if (!anim && req) {
+      anim = {
+        id: "anim-" + Date.now(),
+        farmId: "farm-1",
+        tagNumber: req.animalTag || animalTag,
+        species: req.species || "Cattle",
+        breed: "Farm Livestock",
+        ageMonths: 36,
+        gender: "FEMALE",
+        status: "VACCINATED",
+        vaccinations: [],
+        medicalHistory: []
+      };
+      cache.animalsList.unshift(anim);
+    }
+
+    if (anim) {
+      anim.status = "VACCINATED";
+      if (!anim.vaccinations) anim.vaccinations = [];
+
+      const vacHash = generateHash({
+        tag: animalTag,
+        vaccine: inspectionLog.vaccineGiven || "FMD Dual Antigen",
+        date: Date.now()
+      });
+
+      anim.vaccinations.unshift({
+        vaccineName: inspectionLog.vaccineGiven || "FMD Dual Antigen",
+        batchNumber: inspectionLog.batchNumber || "VAC-2026-8801",
+        administeredDate: new Date().toISOString().split('T')[0],
+        nextDueDate: inspectionLog.followUpDate || "2027-02-20",
+        administeredBy: inspectionLog.vetName || "Dr. Rajesh Sharma",
+        recordHash: vacHash
+      });
+
+      if (!anim.medicalHistory) anim.medicalHistory = [];
+      anim.medicalHistory.unshift({
+        date: new Date().toISOString().split('T')[0],
+        diagnosis: `💉 VACCINATED & VERIFIED — ${inspectionLog.diagnosis || "Clinical Field Inspection Complete"}`,
+        vetName: inspectionLog.vetName || "Dr. Rajesh Sharma",
+        prescriptions: [inspectionLog.treatmentAdministered || "Standard Biosecurity Vaccine Barrier"],
+        remarks: "Field Inspection & Vaccine Administration Completed by Doctor. Case Resolved & Animal Vaccinated."
+      });
+    }
+
+    saveStore();
+    return req;
+  },
+
+  addAnimal: (animObj) => {
+    loadStore();
+    cache.animalsList.unshift(animObj);
+    saveStore();
+  },
+
+  addComplaint: (cmpObj) => {
+    loadStore();
+    cache.complaintsList.unshift(cmpObj);
+    saveStore();
+  },
+
+  generateHash
+};
