@@ -158,7 +158,6 @@ Open your browser and navigate to **`http://localhost:5173`**.
 ##  Live Links
 
 - **Deployed Platform URL:** `https://pashu-rakshak.vercel.app` *(Placeholder)*
-- **Demo Video Walkthrough:** `https://youtube.com/watch?v=demo-placeholder` *(Placeholder)*
 
 ---
 
