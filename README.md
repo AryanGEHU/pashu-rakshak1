@@ -176,5 +176,3 @@ good to go
 good
 ##  Acknowledgements
 
-- Built for **Prasunethon 2.0 Hackathon 2026**
-- Special thanks to open-source communities behind React, Leaflet, OpenStreetMap, TailwindCSS, and Express.js.
