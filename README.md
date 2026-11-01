@@ -1,8 +1,7 @@
 # Pashu Rakshak — AI-Powered Farm Biosecurity & Disease Detection Platform
 
 > **Comprehensive Livestock Health Management, Early Outbreak Prevention & Real-Time GIS Surveillance Engine**  
-> *Built for Prasunethon 2.0 Hackathon 2026*
-
+> 
 ---
 
 ##  Problem Statement
@@ -14,6 +13,7 @@ Traditional reporting relies on manual record-keeping and delayed official notif
 ---
 
 ## ✨ Key Features
+offline IVR: Enables farmers to report animal health issues and access veterinary assistance through a simple phone call, without requiring a smartphone or internet.
 
 - ** Animal-Specific AI Disease Detection:** Multi-species diagnostic engine tailored for Cattle, Buffalo, Swine, and Poultry with two-stage symptom risk analysis.
 - **Offline-First Architecture:** Local caching and instant offline assessment allowing farmers to diagnose symptoms even in zero-connectivity rural zones.
